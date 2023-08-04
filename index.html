@@ -1,23 +1,124 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta name="viewport" content="width=device-width,initial-scale=1.0">
-        <title>Weather App</title>
-        <link rel="stylesheet" href="style.css">
-    </head>
-</html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WEATHER APP</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
 <body>
-    <div class="card">
-        <div class="search">
-            <input type="text" placeholder="enter city name"
-            spellcheck="false">
-            <button><img src="data:image/png;base64,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"></button>
-        </div>
-        <div class="weather">
-            <img src="data:image/png;base64,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">
-            
+    <div class="header">
+        <h1>WEATHER APP</h1>
+        <div>
+            <input type="text" name="" id="input" placeholder="Enter city name">
+            <button id="search" onclick="searchByCity()">Search</button></input>
         </div>
     </div>
 
+    <main>        
+        <div class="weather">
+            <h2 id="city">Delhi,IN</h2>
+            <div class="temp-box">
+                <img src="./bg.jpg" alt="" id="img">
+                <p id="temperature">26 °C</p>
+            </div>
+            <span id="clouds">Broken Clouds</span>
+        </div>
+        <div class="divider1"></div>
+
+        <div class="forecstH">
+            <p class="cast-header">Upcoming forecast</p>
+            <div class="templist">
+
+                <div class="next">
+                    <div>
+                        <p class="time">8:30 PM</p>
+                        <p>29 °C / 29 °C</p>
+                    </div>
+                    <p class="desc">Light Rain</p>
+                </div>
+
+                <div class="next">
+                    <div>
+                        <p class="time">8:30 PM</p>
+                        <p>29 °C / 29 °C</p>
+                    </div>
+                    <p class="desc">Light Rain</p>
+                </div>
+
+                <div class="next">
+                    <div>
+                        <p class="time">8:30 PM</p>
+                        <p>29 °C / 29 °C</p>
+                    </div>
+                    <p class="desc">Light Rain</p>
+                </div>
+
+                <div class="next">
+                    <div>
+                        <p class="time">8:30 PM</p>
+                        <p>29 °C / 29 °C</p>
+                    </div>
+                    <p class="desc">Light Rain</p>
+                </div>
+
+                <div class="next">
+                    <div>
+                        <p class="time">8:30 PM</p>
+                        <p>29 °C / 29 °C</p>
+                    </div>
+                    <p class="desc">Light Rain</p>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <div class="forecstD">
+        <div class="divider2"></div>
+        <p class="cast-header"> Next 7 days forecast</p>
+        <div class="weekF">
+
+            <div class="dayF">
+                <p class="date">Sun Jul 03 2022</p>
+                <p>31 °C / 31 °C</p>
+                <p class="desc">Overcast Clouds</p>
+            </div>
+
+            <div class="dayF">
+                <p class="date">Sun Jul 03 2022</p>
+                <p>31 °C / 31 °C</p>
+                <p class="desc">Overcast Clouds</p>
+            </div>
+
+            <div class="dayF">
+                <p class="date">Sun Jul 03 2022</p>
+                <p>31 °C / 31 °C</p>
+                <p class="desc">Overcast Clouds</p>
+            </div>
+
+            <div class="dayF">
+                <p class="date">Sun Jul 03 2022</p>
+                <p>31 °C / 31 °C</p>
+                <p class="desc">Overcast Clouds</p>
+            </div>
+            <div class="dayF">
+                <p class="date">Sun Jul 03 2022</p>
+                <p>31 °C / 31 °C</p>
+                <p class="desc">Overcast Clouds</p>
+            </div>
+            <div class="dayF">
+                <p class="date">Sun Jul 03 2022</p>
+                <p>31 °C / 31 °C</p>
+                <p class="desc">Overcast Clouds</p>
+            </div><div class="dayF">
+                <p class="date">Sun Jul 03 2022</p>
+                <p>31 °C / 31 °C</p>
+                <p class="desc">Overcast Clouds</p>
+            
+</div>
+    </div>
+    <script src="./App.js"></script>
 </body>
 </html>
